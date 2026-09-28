@@ -1,0 +1,220 @@
+{
+  "users": [
+    {
+      "email": "anna@mail.ru",
+      "password": "$2a$10$n00QVN67HNyxk7C3UYG/uujbWrzC2ePVoBpMS0S1xEpy3tHZZQIvG",
+      "name": "Анна",
+      "color": "#60a5fa",
+      "role": "user",
+      "banned": false,
+      "id": 1
+    },
+    {
+      "email": "matvsidorow@yandex.ru",
+      "password": "$2a$10$yVUhsJp4vkgjw0pbxZOXwuSHVs1BAPKRlngmNLkxPpkcfOa4ju0rK",
+      "name": "Матвей",
+      "color": "#4ade80",
+      "role": "user",
+      "banned": false,
+      "id": 2
+    },
+    {
+      "email": "Admin@gmail.com",
+      "password": "$2a$10$ZZty5wxOkhIlR4QIFYMp/Ozydpf63Hb8sT/bIDqzylV1PkZeO1zg.",
+      "name": "Матеся",
+      "color": "#fbbf24",
+      "role": "admin",
+      "banned": false,
+      "id": 3
+    }
+  ],
+  "meetings": [
+    {
+      "id": 1,
+      "title": "Планёрка по проекту",
+      "description": "Обсуждаем этапы и сроки, распределяем задачи на неделю",
+      "date": "2026-09-28",
+      "time": "10:00",
+      "duration": 60,
+      "place": "Zoom",
+      "authorId": 3,
+      "remindBefore": 15,
+      "participants": [
+        {
+          "userId": 1,
+          "status": "accepted"
+        },
+        {
+          "userId": 2,
+          "status": "pending"
+        }
+      ],
+      "tasks": []
+    },
+    {
+      "id": 2,
+      "title": "Ревью макетов",
+      "description": "Смотрим готовые экраны, собираем правки",
+      "date": "2026-10-02",
+      "time": "11:00",
+      "duration": 90,
+      "place": "Переговорная 3",
+      "authorId": 1,
+      "remindBefore": 60,
+      "participants": [
+        {
+          "userId": 2,
+          "status": "accepted"
+        },
+        {
+          "userId": 3,
+          "status": "declined"
+        }
+      ],
+      "tasks": []
+    },
+    {
+      "id": 3,
+      "title": "Демо для заказчика",
+      "description": "Показываем первую версию платформы",
+      "date": "2026-09-20",
+      "time": "13:00",
+      "duration": 60,
+      "place": "Zoom",
+      "authorId": 3,
+      "remindBefore": 15,
+      "participants": [
+        {
+          "userId": 1,
+          "status": "accepted"
+        },
+        {
+          "userId": 2,
+          "status": "accepted"
+        }
+      ],
+      "tasks": []
+    },
+    {
+      "id": 4,
+      "title": "Ретроспектива спринта",
+      "description": "Что получилось, что нет, что меняем",
+      "date": "2026-10-09",
+      "time": "16:30",
+      "duration": 45,
+      "place": "Google Meet",
+      "authorId": 2,
+      "remindBefore": 1440,
+      "participants": [
+        {
+          "userId": 3,
+          "status": "pending"
+        }
+      ],
+      "tasks": []
+    },
+    {
+      "id": 5,
+      "title": "Личная подготовка к защите",
+      "description": "Встреча без участников, только организатор",
+      "date": "2026-10-05",
+      "time": "09:00",
+      "duration": 120,
+      "place": "Дома",
+      "authorId": 3,
+      "remindBefore": 15,
+      "participants": [],
+      "tasks": []
+    },
+    {
+      "id": 6,
+      "title": "Созвон Анны и Матвея",
+      "description": "Матеся сюда не приглашена, эта встреча не должна попадать в её список",
+      "date": "2026-10-07",
+      "time": "14:00",
+      "duration": 30,
+      "place": "Telegram",
+      "authorId": 1,
+      "remindBefore": 15,
+      "participants": [
+        {
+          "userId": 2,
+          "status": "accepted"
+        }
+      ],
+      "tasks": []
+    },
+    {
+      "id": 7,
+      "title": "Длинное название встречи, чтобы проверить, как ведёт себя вёрстка при переносе текста на несколько строк",
+      "description": "Проверка длинного текста",
+      "date": "2026-10-15",
+      "time": "18:45",
+      "duration": 30,
+      "place": "Очень длинное название переговорной комнаты в бизнес-центре",
+      "authorId": 3,
+      "remindBefore": 15,
+      "participants": [
+        {
+          "userId": 1,
+          "status": "pending"
+        },
+        {
+          "userId": 2,
+          "status": "pending"
+        }
+      ],
+      "tasks": []
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "userId": 3,
+      "text": "Анна приглашает вас на «Ревью макетов»",
+      "meetingId": 2,
+      "read": true,
+      "createdAt": "2026-09-27T17:07:04.306Z"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "text": "Матвей приглашает вас на «Ретроспектива спринта»",
+      "meetingId": 4,
+      "read": true,
+      "createdAt": "2026-09-27T09:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "text": "Анна принял приглашение: «Планёрка по проекту»",
+      "meetingId": 1,
+      "read": true,
+      "createdAt": "2026-09-26T14:20:00.000Z"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "text": "Матеся приглашает вас на «Планёрка по проекту»",
+      "meetingId": 1,
+      "read": false,
+      "createdAt": "2026-09-27T08:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "text": "Матеся приглашает вас на «Планёрка по проекту»",
+      "meetingId": 1,
+      "read": false,
+      "createdAt": "2026-09-27T08:00:00.000Z"
+    },
+    {
+      "userId": 2,
+      "text": "Матеся приглашает вас на «Планёрка по проекту»",
+      "meetingId": 1,
+      "read": false,
+      "createdAt": "2026-09-27T17:11:04.477Z",
+      "id": 6
+    }
+  ]
+}

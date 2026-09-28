@@ -1,0 +1,5 @@
+{
+    "/meetings*": "/660/meetings$1",
+    "/notifications*": "/660/notifications$1",
+    "/users*": "/660/users$1" 
+}

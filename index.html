@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои встречи</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">ЛюбимыеВстречи</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Мои встречи</a></li>
+                <li><a href="calendar.html">Календарь</a></li>
+                <li><a href="profile.html">Профиль</a></li>
+                <li><a class="" href="admin.html" id="admin-link">Админка</a></li>
+            </ul>
+        </nav>
+        <div class="notif-wrap">
+    <button class="notif-btn" id="notif-btn" type="button">
+        🔔
+        <span class="notif-badge hidden" id="notif-badge">0</span>
+    </button>
+
+    <div class="notif-panel hidden" id="notif-panel">
+        <div class="notif-top">
+            <span>Уведомления</span>
+            <button class="notif-read-all" id="notif-read-all" type="button">Прочитать все</button>
+        </div>
+        <div class="notif-list" id="notif-list"></div>
+    </div>
+</div>
+            <button class="logout" type="button">Выйти</button>
+            <div class="user">
+                <div class="user__avatar"></div>
+                <span class="user__name"></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="next-meeting">
+            <h2 class="section-title">Ближайшая встреча</h2>
+            <div class="next-meeting_body"></div>
+        </section>
+
+        <section>
+            <div class="meetings__top">
+                <h2 class="section-title">Все встречи</h2>
+                <button class="meeting__btn" type="button">Создать встречу</button>
+            </div>
+
+            <div class="filters">
+                <button class="filters__btn filters__btn_active" data-filter="" type="button">Все</button>
+                <button class="filters__btn" data-filter="organizer" type="button">Я организатор</button>
+                <button class="filters__btn" data-filter="waiting" type="button">Жду ответа</button>
+                <button class="filters__btn" data-filter="accepted" type="button">Принятые</button>
+                <button class="filters__btn" data-filter="past" type="button">Прошедшие</button>
+            </div>
+
+            <input class="search" type="search" placeholder="Поиск по названию">
+            <div class="meetings__list"></div>
+        </section>
+    </main>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>

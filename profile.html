@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="profile-header">
+        <a href="index.html" class="profile-logo" style="color:white;text-decoration:none;">
+            МойПрофиль
+        </a>
+       <div class="notif-wrap">
+    <button class="notif-btn" id="notif-btn" type="button">
+        🔔
+        <span class="notif-badge hidden" id="notif-badge">0</span>
+    </button>
+
+    <a class="hidden" href="admin.html" id="admin_link">Админка</a>
+
+    <div class="notif-panel hidden" id="notif-panel">
+        <div class="notif-top">
+            <span>Уведомления</span>
+            <button class="notif-read-all" id="notif-read-all" type="button">Прочитать все</button>
+        </div>
+        <div class="notif-list" id="notif-list"></div>
+    </div>
+</div>
+        <button class="profile-logout" type="button">Выйти</button>
+    </header>
+
+    <main class="profile-container">
+        <section class="profile-info">
+            <div class="profile-avatar" id="profile-avatar">?</div>
+            <div>
+                <h1 class="profile-name" id="profile-name">—</h1>
+                <p class="profile-role">Пользователь</p>
+                <div class="profile-accent"></div>
+            </div>
+        </section>
+
+        <section class="profile-card">
+            <h2 class="profile-card-title">Информация</h2>
+            <div class="profile-row">
+                <div class="profile-label">Имя</div>
+                <div class="profile-value" id="info-name">—</div>
+            </div>
+            <div class="profile-row">
+                <div class="profile-label">Email</div>
+                <div class="profile-value" id="info-email">—</div>
+            </div>
+            <div class="profile-row">
+                <div class="profile-label">ID</div>
+                <div class="profile-value" id="info-id">—</div>
+            </div>
+        </section>
+
+        <p style="text-align:center;margin-top:25px;">
+            <a href="index.html" style="color:var(--blue);">← К встречам</a>
+        </p>
+    </main>
+
+    <script type="module" src="js/profile.js"></script>
+</body>
+</html>

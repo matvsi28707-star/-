@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админка</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+        <a href="index.html" class="logo">ЛюбимыеВстречи</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Мои встречи</a></li>
+                <li><a href="calendar.html">Календарь</a></li>
+                <li><a href="profile.html">Профиль</a></li>
+                <li><a class="hidden" href="admin.html" id="admin_link"></a></li>
+            </ul>
+        </nav>
+        <div class="notif-wrap">
+    <button class="notif-btn" id="notif-btn" type="button">
+        🔔
+        <span class="notif-badge hidden" id="notif-badge">0</span>
+    </button>
+
+    <div class="notif-panel hidden" id="notif-panel">
+        <div class="notif-top">
+            <span>Уведомления</span>
+            <button class="notif-read-all" id="notif-read-all" type="button">Прочитать все</button>
+        </div>
+        <div class="notif-list" id="notif-list"></div>
+    </div>
+</div>
+            <button class="logout" type="button">Выйти</button>
+            <div class="user">
+                <div class="user__avatar"></div>
+                <span class="user__name"></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="event-title">Пользователи</h1>
+        <p class="empty-events" id="admin-count"></p>
+
+        <div id="admin-list"></div>
+    </main>
+
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>

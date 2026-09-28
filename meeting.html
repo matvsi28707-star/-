@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подробнее о встрече</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="profile-header">
+        <a href="index.html" class="profile-logo" style="color:white;text-decoration:none;">
+            Подробнее
+        </a>
+        <div class="notif-wrap">
+    <button class="notif-btn" id="notif-btn" type="button">
+        🔔
+        <span class="notif-badge hidden" id="notif-badge">0</span>
+    </button>
+
+    <a class="hidden" href="admin.html" id="admin_link"></a>
+
+    <div class="notif-panel hidden" id="notif-panel">
+        <div class="notif-top">
+            <span>Уведомления</span>
+            <button class="notif-read-all" id="notif-read-all" type="button">Прочитать все</button>
+        </div>
+        <div class="notif-list" id="notif-list"></div>
+    </div>
+</div>
+        <button class="profile-logout" type="button">Выйти</button>
+        
+    </header>
+
+    <main class="profile-container">
+        <div class="event-card" id="meeting-box">
+            <p>Загрузка...</p>
+        </div>
+
+        <p style="text-align:center; margin-top: 25px;">
+            <a href="index.html" style="color: var(--blue);">← Назад к встречам</a>
+        </p>
+    </main>
+
+    <script type="module" src="js/meeting.js"></script>
+</body>
+</html>

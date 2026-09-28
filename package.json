@@ -1,0 +1,12 @@
+{
+  "name": "meetings-platform",
+  "version": "1.0.0",
+  "scripts": {
+    "server": "json-server-auth db.json -r routes.json -p 3000",
+    "seed": "node scripts/seed.js"
+  },
+  "devDependencies": {
+    "json-server": "0.17.4",
+    "json-server-auth": "2.1.0"
+  }
+}

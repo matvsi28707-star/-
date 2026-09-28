@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="profile-header">
+        <a href="index.html" class="profile-logo" style="color:white;text-decoration:none;">
+            Мой календарь
+        </a>
+       <div class="notif-wrap">
+    <button class="notif-btn" id="notif-btn" type="button">
+        🔔
+        <span class="notif-badge hidden" id="notif-badge">0</span>
+    </button>
+
+    <a class="hidden" href="admin.html" id="admin_link">Админка</a>
+
+    <div class="notif-panel hidden" id="notif-panel">
+        <div class="notif-top">
+            <span>Уведомления</span>
+            <button class="notif-read-all" id="notif-read-all" type="button">Прочитать все</button>
+        </div>
+        <div class="notif-list" id="notif-list"></div>
+    </div>
+</div>
+        <button class="profile-logout" type="button">Выйти</button>
+    </header>
+    <main class="calendar-container">
+        <section class="calendar-card">
+            <div class="calendar-top">
+                <button
+                    class="calendar-arrow"
+                    id="prevMonth"
+                    type="button"
+                >
+                    ←
+                </button>
+                <h1
+                    class="calendar-title"
+                    id="monthTitle"
+                >
+                    Сентябрь 2026
+                </h1>
+                <button
+                    class="calendar-arrow"
+                    id="nextMonth"
+                    type="button"
+                >
+                    →
+                </button>
+            </div>
+            <div class="calendar-weekdays">
+                <div>Пн</div>
+                <div>Вт</div>
+                <div>Ср</div>
+                <div>Чт</div>
+                <div>Пт</div>
+                <div>Сб</div>
+                <div>Вс</div>
+            </div>
+            <div
+                class="calendar-days"
+                id="calendarDays"
+            >
+            </div>
+        </section>
+        <section class="event-card">
+            <h2 class="event-title">
+                Новое событие
+            </h2>
+            <form id="eventForm">
+                <div class="form-group">
+                    <label
+                        class="form-label"
+                        for="eventName"
+                    >
+                        Название события
+                    </label>
+                    <input
+                        class="form-input"
+                        type="text"
+                        id="eventName"
+                        placeholder="Например: Встреча с другом"
+                        required
+                    >
+                </div>
+                <div class="event-row">
+                    <div class="form-group">
+                        <label
+                            class="form-label"
+                            for="eventDate"
+                        >
+                            Дата
+                        </label>
+                        <input
+                            class="form-input"
+                            type="date"
+                            id="eventDate"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label
+                            class="form-label"
+                            for="eventTime"
+                        >
+                            Время
+                        </label>
+                        <input
+                            class="form-input"
+                            type="time"
+                            id="eventTime"
+                            required
+                        >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label
+                        class="form-label"
+                        for="eventAddress"
+                    >
+                        Адрес
+                    </label>
+                    <input
+                        class="form-input"
+                        type="text"
+                        id="eventAddress"
+                        placeholder="Например: ул. Ленина, 10"
+                        required
+                    >
+                </div>
+                <div class="form-group">
+                    <label
+                        class="form-label"
+                        for="reminder"
+                    >
+                        Напоминание
+                    </label>
+                    <select
+                        class="form-input"
+                        id="reminder"
+                    >
+                        <option value="0">
+                            В момент события
+                        </option>
+                        <option value="5">
+                            За 5 минут
+                        </option>
+                        <option value="15" selected>
+                            За 15 минут
+                        </option>
+                        <option value="30">
+                            За 30 минут
+                        </option>
+                        <option value="60">
+                            За 1 час
+                        </option>
+                        <option value="1440">
+                            За 1 день
+                        </option>
+                    </select>
+                </div>
+                <button
+                    class="login-button"
+                    type="submit"
+                >
+                    Запланировать
+                </button>
+                <div class="form-group">
+                    <label class="form-label" for="eventInvite">
+                        Пригласить (email через запятую)
+                    </label>
+                    <input
+                        class="form-input"
+                        type="text"
+                        id="eventInvite"
+                        placeholder="anna@mail.ru, matvsidorow@yandex.ru"
+                    >
+                </div>
+            </form>
+        </section>
+        <section class="events-card">
+            <h2 class="event-title">
+                Запланированные события
+            </h2>
+            <div id="eventsList">
+            </div>
+        </section>
+    </main>
+    <script type="module" src="js/calendar.js"></script>
+</body>
+</html>

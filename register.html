@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="login-page">
+        <section class="login-card">
+            <h1 class="login-title">
+                Регистрация
+            </h1>
+            <p class="login-subtitle">
+                Создайте новый аккаунт
+            </p>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label
+                        class="form-label"
+                        for="name"
+                    >
+                        Имя
+                    </label>
+                    <input
+                        class="form-input"
+                        type="text"
+                        id="login"
+                        name="name"
+                        placeholder="Введите имя"
+                        required
+                    >
+                    <span class="form-error"></span>
+
+                </div>
+                <div class="form-group">
+                    <label
+                        class="form-label"
+                        for="email"
+                    >
+                        Email
+                    </label>
+                    <input
+                        class="form-input"
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Введите email"
+                        required
+                    >
+                    <span class="form-error"></span>
+
+
+                </div>
+                <div class="form-group">
+                    <label
+                        class="form-label"
+                        for="password"
+                    >
+                        Пароль
+                    </label>
+                    <input
+                        class="form-input"
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Введите пароль"
+                        required
+                    >
+                    <span class="form-error"></span>
+
+
+                </div>
+                <div class="form-group">
+                    <label
+                        class="form-label"
+                        for="replayPassword"
+                    >
+                        Повторите пароль
+                    </label>
+                    <input
+                        class="form-input"
+                        type="password"
+                        id="replayPassword"
+                        name="replayPassword"
+                        placeholder="Повторите пароль"
+                        required
+                    >
+                    <span class="form-error"></span>
+
+
+                </div>
+                <button
+                    class="login-button"
+                    type="submit"
+                >
+                    Зарегистрироваться
+                </button>
+                <div class="register-link">
+                    Уже есть аккаунт?
+                    <a href="login.html">
+                        Войти
+                    </a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script type="module" src="js/register.js"></script>
+</body>
+
+</html>
